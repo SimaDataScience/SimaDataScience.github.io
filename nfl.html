@@ -32,11 +32,43 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>NFL Data Scraping and Visualization</h1>
+										<h1>NFL Web Scraping with Python and Visualizaiton with RShiny</h1>
 									</header>
 
-									<span class="image main"><img src="images/nfl_wide.jpg" alt="" /></span>
+									<a href="https://justinsima-apps.shinyapps.io/nfldashboard/" class="image main"><img src="images/nfl_wide.jpg" alt="" /></span></a>
+									
+									<h2>How To Use This Dashboard</h2>
+									<p>
+										This dashboard was created using the score of every NFL game since 2002.
+										It can be used to summarise a single team's previous performance,
+											compare how two teams have performed against each other historically,
+											or show team rankings by year.
+									</br>
+									</br>
+										The controls at the top of each page control which team/s to look at, which metric to use, and how far back to go when calculating statistics.
+										Click on the football field above to be taken to the dashboard!
+									</br>
+									</br>
+										<i>Note: In all visualizations and calculated win/loss statistics, zero corresponds to a loss, one corresponds to a win, and one half corresponds to a tie.</i>
+									</p>
 
+									<h2>Where Did I Get My Data?</h2>
+									<p>
+										The story of this project was the story of data collection.
+										Originally, I wanted to create an extensive dashboard with detailed player and team statistics.
+										However, the more I looked the more I realized that these statistics were almost unanimously either located behind a paywall or not allowed to be scraped.
+										I had two options: I could use IP rotation / random interval resting to get the data anyway,
+											or I could do the ethical thing and get creative with the data that I was allowed to scrape.
+										I chose the later, and obtained only game score data from <a href="https://www.pro-football-reference.com/">Pro Football Reference</a>.
+										The dashboard shows my attempt to get as much information as possible from only team names and team scores.
+									</br>
+									</br>
+										I created a notebook to scrape <a href="https://www.pro-football-reference.com/">Pro Football Reference</a> using
+										Selenium and Beautiful soup, which can be found <a href="https://github.com/SimaDataScience/nfl-dashboard-data">here</a>. 
+										An oversight almost caused me to miss all games that resulted in ties, which is a great reminder of the importance of data validation.
+										I include the ties manually and also perform some basic data cleaning in python before the data is then ready for visualization in R.
+
+									</p>
 								</section>
 
 						</div>
@@ -69,14 +101,14 @@
 										<span class="opener">EDA, Data Visualizaiton, and Web Scraping Projects</span>
 										<ul>
 											<li><a href="nfl.html">NFL History</a></li>
-											<li><a href="covid.html">Vaccine Hesitancy</a></li>
+											<li><a href="covid.html">Covid Vaccine Hesitancy</a></li>
 										</ul>
 									</li>
 									<li>
 										<span class="opener">Machine Learning Projects</span>
 										<ul>
 											<li><a href="pawpularity.html">Image Regression with CNNs</a></li>
-											<li><a href="twilight.html">Image Generation with HPT-2</a></li>
+											<li><a href="twilight.html">Image Generation with GPT-3</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -90,7 +122,7 @@
 								</header>
 								<p>Feel free to reach out via email or phone.</p>
 								<ul class="contact">
-									<li class="icon solid fa-envelope"><a href="#">sima.justin@gmail.com</a></li>
+									<li class="icon solid fa-envelope">sima.justin@gmail.com</li>
 									<li class="icon solid fa-phone">(602) 573-1761</li>
 								</ul>
 							</section>
